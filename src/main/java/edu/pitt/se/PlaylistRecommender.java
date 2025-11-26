@@ -23,7 +23,7 @@ public class PlaylistRecommender {
     }
 
     public static boolean isValidTrackTitle(String title) {
-        String validChar = " ABCDEFGHIJKLMNOPQRXTUVWXYZabcdefghijklmnopqrstuvwxyz";
+        String validChar = "ABCDEFGHIJKLMNOPQRXTUVWXYZabcdefghijklmnopqrstuvwxyz";
         if (title.length() > 30  || title.length() == 0) {
             return false;
         }
