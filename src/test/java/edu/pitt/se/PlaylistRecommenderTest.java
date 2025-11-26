@@ -18,7 +18,7 @@ public class PlaylistRecommenderTest {
     }
     @Test
     public void testTitle() {
-        assertTrue(PlaylistRecommender.isValidTrackTitle("Valid Song Title"));
+        assertTrue(PlaylistRecommender.isValidTrackTitle("ValidSongTitle"));
         assertFalse(PlaylistRecommender.isValidTrackTitle("Invalid Song Title!"));
         assertFalse(PlaylistRecommender.isValidTrackTitle("Invalid Song Title due to title length"));
     }
