@@ -14,7 +14,7 @@ public class PlaylistRecommenderTest {
     public void testClassify() {
         assertEquals("HIGH", PlaylistRecommender.classifyEnergy(new ArrayList<>(Arrays.asList(150, 130, 170))));
         assertEquals("MEDIUM", PlaylistRecommender.classifyEnergy(new ArrayList<>(Arrays.asList(130, 110, 120))));
-        assertEquals("MEDIUM", PlaylistRecommender.classifyEnergy(new ArrayList<>(Arrays.asList(70, 80, 90))));
+        assertEquals("LOW", PlaylistRecommender.classifyEnergy(new ArrayList<>(Arrays.asList(70, 80, 90))));
     }
     @Test
     public void testTitle() {

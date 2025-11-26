@@ -24,15 +24,15 @@ public class PlaylistRecommender {
 
     public static boolean isValidTrackTitle(String title) {
         String validChar = "ABCDEFGHIJKLMNOPQRXTUVWXYZabcdefghijklmnopqrstuvwxyz ";
+        if (title.length() > 30) {
+            return false;
+        }
         boolean returner = title.isEmpty();
         for (char c : title.toCharArray()) {
             returner = validChar.contains(""+c);
             if (returner == false) {
                 return returner;
             }
-        }
-        if (title.length() > 30) {
-            return false;
         }
         return returner;
     }
