@@ -23,8 +23,18 @@ public class PlaylistRecommender {
     }
 
     public static boolean isValidTrackTitle(String title) {
-        // TODO: Implement isValidTrackTitle()
-        throw new UnsupportedOperationException("Not implemented");
+        String validChar = "ABCDEFGHIJKLMNOPQRXTUVWXYZabcdefghijklmnopqrstuvwxyz ";
+        boolean returner = title.isEmpty();
+        for (char c : title.toCharArray()) {
+            returner = validChar.contains(""+c);
+            if (returner == false) {
+                return returner;
+            }
+        }
+        if (title.length() > 30) {
+            return false;
+        }
+        return returner;
     }
 
     public static int normalizeVolume(int volumeDb) {
