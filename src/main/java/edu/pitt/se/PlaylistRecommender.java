@@ -38,7 +38,8 @@ public class PlaylistRecommender {
     }
 
     public static int normalizeVolume(int volumeDb) {
-        // TODO: Implement normalizeVolume()
-        throw new UnsupportedOperationException("Not implemented");
+        if (volumeDb > 100) {volumeDb = 100;}
+        if (volumeDb < 0) {volumeDb = 0;}
+        return volumeDb;
     }
 }
