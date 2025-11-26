@@ -30,9 +30,6 @@ public class PlaylistRecommender {
         boolean returner = true;
         for (char c : title.toCharArray()) {
             returner = validChar.contains((c+""));
-            if (returner == false) {
-                return returner;
-            }
         }
         return returner;
     }
